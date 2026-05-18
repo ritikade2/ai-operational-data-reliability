@@ -51,7 +51,7 @@ Evaluated across four controlled drift scenarios on synthetic enterprise data an
 All metrics increase monotonically with injected drift across both datasets, confirming the framework reliabily detects and grades drift severity.
 
 ## Project Structure
-
+```
 ai-operational-data-reliability/
 ├── generate_data.py          # synthetic enterprise logs, 4 drift scenarios
 ├── build_db.py               # load CSVs into DuckDB
@@ -67,7 +67,7 @@ ai-operational-data-reliability/
 │   └── aggregator.py         # weighted reliability score + verdict
 ├── data/                     # generated CSV files and DuckDB
 └── outputs/                  # JSON reports, markdown reports, summary CSV
-
+```
 ## Setup
 
 ```bash
