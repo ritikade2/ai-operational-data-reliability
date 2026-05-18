@@ -1,0 +1,164 @@
+{
+  "scenario": "mild_drift",
+  "aggregated": {
+    "reliability_score": 85.2,
+    "verdict": "Ready",
+    "component_scores": {
+      "intent_drift": 61.6,
+      "confidence": 88.5,
+      "fallback_rate": 84.5,
+      "latency": 29.0,
+      "attempts": 93.3,
+      "bi_readiness": 100.0,
+      "transfer_rate": 82.5
+    },
+    "weights": {
+      "intent_drift": 0.3,
+      "confidence": 0.2,
+      "fallback_rate": 0.15,
+      "latency": 0.1,
+      "attempts": 0.1,
+      "bi_readiness": 0.2,
+      "transfer_rate": 0.05
+    },
+    "thresholds": {
+      "ready": 80,
+      "caution": 50
+    }
+  },
+  "modules": {
+    "intent_drift": {
+      "module": "intent_drift",
+      "js_distance": 0.1921,
+      "js_divergence": 0.0369,
+      "vocab_size_a": 8,
+      "vocab_size_b": 19,
+      "new_intents": [
+        "account_balance_check",
+        "card_management",
+        "credit_inquiry",
+        "document_request",
+        "fund_movement",
+        "insurance_claim",
+        "investment_advice",
+        "payment_processing",
+        "profile_update",
+        "transaction_dispute",
+        "unknown"
+      ],
+      "missing_intents": [],
+      "new_intent_count": 11,
+      "missing_intent_count": 0,
+      "avg_input_length_a": 41.29,
+      "avg_input_length_b": 68.86,
+      "input_length_ks_stat": 0.4115,
+      "input_length_ks_pvalue": 0.0,
+      "avg_turns_a": 1.991,
+      "avg_turns_b": 2.774,
+      "turns_delta": 0.783
+    },
+    "confidence": {
+      "module": "confidence",
+      "mean_a": 0.8022,
+      "mean_b": 0.7712,
+      "mean_delta": -0.031,
+      "std_a": 0.1167,
+      "std_b": 0.1562,
+      "ks_statistic": 0.0765,
+      "ks_pvalue": 1.6e-05,
+      "significant_shift": true,
+      "low_confidence_rate_a": 0.018,
+      "low_confidence_rate_b": 0.0685,
+      "low_confidence_delta": 0.0505
+    },
+    "fallback_rate": {
+      "module": "fallback_rate",
+      "period_a": {
+        "total_records": 2000,
+        "fallback_flag_rate": 0.0,
+        "fallback_label_rate": 0.0,
+        "combined_fallback_rate": 0.0,
+        "avg_intent_attempts": 1.508,
+        "avg_response_latency_ms": 453.71,
+        "high_latency_rate": 0.0,
+        "transfer_rate": 0.079,
+        "transfer_reasons": {
+          "none": 0.93,
+          "customer_request": 0.0345,
+          "unresolved": 0.0225,
+          "timeout": 0.013
+        }
+      },
+      "period_b": {
+        "total_records": 2000,
+        "fallback_flag_rate": 0.0155,
+        "fallback_label_rate": 0.0155,
+        "combined_fallback_rate": 0.0155,
+        "avg_intent_attempts": 1.6415,
+        "avg_response_latency_ms": 827.52,
+        "high_latency_rate": 0.072,
+        "transfer_rate": 0.114,
+        "transfer_reasons": {
+          "none": 0.886,
+          "unresolved": 0.0455,
+          "low_confidence": 0.038,
+          "customer_request": 0.0185,
+          "timeout": 0.012
+        }
+      },
+      "fallback_rate_delta": 0.0155,
+      "spike_detected": false,
+      "spike_threshold": 0.04,
+      "latency_delta_ms": 373.81,
+      "latency_ks_statistic": 0.473,
+      "latency_ks_pvalue": 0.0,
+      "attempts_delta": 0.1335
+    },
+    "bi_readiness": {
+      "module": "bi_readiness",
+      "intent_coverage_rate": 1.0,
+      "unmapped_intent_rate": 0.5789,
+      "unmapped_intents": [
+        "account_balance_check",
+        "card_management",
+        "credit_inquiry",
+        "document_request",
+        "fund_movement",
+        "insurance_claim",
+        "investment_advice",
+        "payment_processing",
+        "profile_update",
+        "transaction_dispute",
+        "unknown"
+      ],
+      "covered_intents": [
+        "check_balance",
+        "dispute_charge",
+        "freeze_card",
+        "loan_inquiry",
+        "make_payment",
+        "request_statement",
+        "transfer_funds",
+        "update_address"
+      ],
+      "resolution_rate_a": 0.898,
+      "resolution_rate_b": 0.819,
+      "resolution_rate_delta": -0.079,
+      "transfer_rate_a": 0.079,
+      "transfer_rate_b": 0.114,
+      "transfer_rate_delta": 0.035,
+      "transfer_reasons_period_b": {
+        "unresolved": 0.3991,
+        "low_confidence": 0.3333,
+        "customer_request": 0.1623,
+        "timeout": 0.1053
+      },
+      "channel_js_distance": 0.0199,
+      "avg_turns_a": 1.991,
+      "avg_turns_b": 2.774,
+      "turns_delta": 0.783,
+      "duplicate_session_rate_a": 0.0,
+      "duplicate_session_rate_b": 0.0
+    }
+  }
+}

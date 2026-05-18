@@ -1,0 +1,140 @@
+{
+  "scenario": "baseline",
+  "aggregated": {
+    "reliability_score": 100.0,
+    "verdict": "Ready",
+    "component_scores": {
+      "intent_drift": 93.4,
+      "confidence": 96.7,
+      "fallback_rate": 100.0,
+      "latency": 41.9,
+      "attempts": 99.9,
+      "bi_readiness": 100.0,
+      "transfer_rate": 85.2
+    },
+    "weights": {
+      "intent_drift": 0.3,
+      "confidence": 0.2,
+      "fallback_rate": 0.15,
+      "latency": 0.1,
+      "attempts": 0.1,
+      "bi_readiness": 0.2,
+      "transfer_rate": 0.05
+    },
+    "thresholds": {
+      "ready": 80,
+      "caution": 50
+    }
+  },
+  "modules": {
+    "intent_drift": {
+      "module": "intent_drift",
+      "js_distance": 0.0328,
+      "js_divergence": 0.0011,
+      "vocab_size_a": 8,
+      "vocab_size_b": 8,
+      "new_intents": [],
+      "missing_intents": [],
+      "new_intent_count": 0,
+      "missing_intent_count": 0,
+      "avg_input_length_a": 41.29,
+      "avg_input_length_b": 62.64,
+      "input_length_ks_stat": 0.363,
+      "input_length_ks_pvalue": 0.0,
+      "avg_turns_a": 1.991,
+      "avg_turns_b": 2.4985,
+      "turns_delta": 0.5075
+    },
+    "confidence": {
+      "module": "confidence",
+      "mean_a": 0.8022,
+      "mean_b": 0.8003,
+      "mean_delta": -0.0019,
+      "std_a": 0.1167,
+      "std_b": 0.1236,
+      "ks_statistic": 0.022,
+      "ks_pvalue": 0.718514,
+      "significant_shift": false,
+      "low_confidence_rate_a": 0.018,
+      "low_confidence_rate_b": 0.0235,
+      "low_confidence_delta": 0.0055
+    },
+    "fallback_rate": {
+      "module": "fallback_rate",
+      "period_a": {
+        "total_records": 2000,
+        "fallback_flag_rate": 0.0,
+        "fallback_label_rate": 0.0,
+        "combined_fallback_rate": 0.0,
+        "avg_intent_attempts": 1.508,
+        "avg_response_latency_ms": 453.71,
+        "high_latency_rate": 0.0,
+        "transfer_rate": 0.079,
+        "transfer_reasons": {
+          "none": 0.93,
+          "customer_request": 0.0345,
+          "unresolved": 0.0225,
+          "timeout": 0.013
+        }
+      },
+      "period_b": {
+        "total_records": 2000,
+        "fallback_flag_rate": 0.0,
+        "fallback_label_rate": 0.0,
+        "combined_fallback_rate": 0.0,
+        "avg_intent_attempts": 1.5095,
+        "avg_response_latency_ms": 688.55,
+        "high_latency_rate": 0.0,
+        "transfer_rate": 0.1085,
+        "transfer_reasons": {
+          "none": 0.8915,
+          "low_confidence": 0.0445,
+          "unresolved": 0.03,
+          "customer_request": 0.0245,
+          "timeout": 0.0095
+        }
+      },
+      "fallback_rate_delta": 0.0,
+      "spike_detected": false,
+      "spike_threshold": 0.04,
+      "latency_delta_ms": 234.84,
+      "latency_ks_statistic": 0.387,
+      "latency_ks_pvalue": 0.0,
+      "attempts_delta": 0.0015
+    },
+    "bi_readiness": {
+      "module": "bi_readiness",
+      "intent_coverage_rate": 1.0,
+      "unmapped_intent_rate": 0.0,
+      "unmapped_intents": [],
+      "covered_intents": [
+        "check_balance",
+        "dispute_charge",
+        "freeze_card",
+        "loan_inquiry",
+        "make_payment",
+        "request_statement",
+        "transfer_funds",
+        "update_address"
+      ],
+      "resolution_rate_a": 0.898,
+      "resolution_rate_b": 0.8305,
+      "resolution_rate_delta": -0.0675,
+      "transfer_rate_a": 0.079,
+      "transfer_rate_b": 0.1085,
+      "transfer_rate_delta": 0.0295,
+      "transfer_reasons_period_b": {
+        "low_confidence": 0.4101,
+        "unresolved": 0.2765,
+        "customer_request": 0.2258,
+        "timeout": 0.0876
+      },
+      "channel_js_distance": 0.0202,
+      "avg_turns_a": 1.991,
+      "avg_turns_b": 2.4985,
+      "turns_delta": 0.5075,
+      "duplicate_session_rate_a": 0.0,
+      "duplicate_session_rate_b": 0.0
+    }
+  }
+}

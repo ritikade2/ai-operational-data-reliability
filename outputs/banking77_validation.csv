@@ -1,0 +1,5 @@
+scenario,masked_intents,js_distance,js_divergence,new_intents,missing_intents,turns_delta
+baseline,0%,0.0738,0.0054,0,0,0.0
+mild_drift,10%,0.2532,0.0641,1,7,0.0
+moderate_drift,30%,0.4718,0.2226,1,23,0.0
+severe_drift,50%,0.5902,0.3483,1,38,0.0
