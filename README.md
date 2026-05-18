@@ -5,7 +5,7 @@ A monitoring framework that evaluates whether AI-generated operational data is r
 ## The Problem
 
 Enterprises are rapidly replacing rule-based classification systems with LLM-powered agents. 
-When this happens, the structure and meaning of operal data changes. The intent labels shift, confidence scores degrade, fallback rates spike, and response latency increases. Without a systematic way to detect this drift, BI dashboards and downstream analytics become unreliable. 
+When this happens, the structure and meaning of operational data changes. The intent labels shift, confidence scores degrade, fallback rates spike, and response latency increases. Without a systematic way to detect this drift, BI dashboards and downstream analytics become unreliable. 
 
 This framework detects when AI-agent output data has drifted enough to be untrustworthy for reporting, i.e. before bad data reaches decision-makers.
 
@@ -48,7 +48,7 @@ Evaluated across four controlled drift scenarios on synthetic enterprise data an
 | Moderate | 30% | 0.472 | 0.223 |
 | Severe | 50% | 0.590 | 0.348 |
 
-All metrics increase monotonically with injected drift across both datasets, confirming the framework reliabily detects and grades drift severity.
+All metrics increase monotonically with injected drift across both datasets, confirming the framework reliably detects and grades drift severity.
 
 ## Project Structure
 ```
