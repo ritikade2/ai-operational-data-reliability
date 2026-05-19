@@ -9,6 +9,17 @@ When this happens, the structure and meaning of operational data changes. The in
 
 This framework detects when AI-agent output data has drifted enough to be untrustworthy for reporting, i.e. before bad data reaches decision-makers.
 
+## Why This Matters
+Unreliable AI-generated operational data does not fail loudly; it fails silently,
+corrupting KPI reports, invalidating trend comparisons, and introducing hidden
+instability into enterprise decision systems before anyone notices. When an
+enterprise migrates from a rule-based system to an LLM-powered agent, the
+operational data it produces changes in structure, vocabulary, and statistical
+behavior. Dashboards built on Period A assumptions can become misleading when
+Period B data drifts undetected. This framework makes that drift visible,
+measurable, and actionable before it reaches downstream reporting and analytics
+layers.
+
 ## How it works
 
 The framework evaluates four reliability dimensions:
