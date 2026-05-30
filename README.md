@@ -1,7 +1,13 @@
 # AI Operational Data Reliability
 
 A monitoring framework that evaluates whether AI-generated operational data is reliable enough for enterprise analytics and BI reporting.
-    
+## Citation
+
+If you use this framework, please cite:
+
+De, R. (2026). A Drift Detection Framework for AI-Generated Operational Data in 
+Enterprise Analytics. Zenodo. https://doi.org/10.5281/zenodo.20455620
+
 ## The Problem
 
 Enterprises are rapidly replacing rule-based classification systems with LLM-powered agents. 
