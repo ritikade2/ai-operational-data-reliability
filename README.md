@@ -8,6 +8,12 @@ If you use this framework, please cite:
 De, R. (2026). A Drift Detection Framework for AI-Generated Operational Data in 
 Enterprise Analytics. Zenodo. https://doi.org/10.5281/zenodo.20455620
 
+## Publication & Data
+
+- **Paper (Zenodo):** https://doi.org/10.5281/zenodo.20455619
+- **Dataset (Kaggle):** https://www.kaggle.com/datasets/ritikade3/enterprise-ai-agent-drift-detection-benchmark
+- **Preprint (SSRN):** pending
+
 ## The Problem
 
 Enterprises are rapidly replacing rule-based classification systems with LLM-powered agents. 
